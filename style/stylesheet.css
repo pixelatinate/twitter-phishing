@@ -2,9 +2,13 @@
     font-family: Chirp;
     src: url('chirp-bold-web.woff'), url('chirp-bold-web.woff') format('woff');
 }
+@font-face{
+    font-family: Chirp-Regular;
+    src: url('chirp-regular-web.woff'), url('chirp-regular-web.woff') format('woff');
+}
 Html, body{
 	font-family: Chirp;
-    font-size: 1.5em;
+    font-size: 1.4em;
     background:#242d35;
     height: 100%    ;
     margin: 0px     ;
@@ -18,17 +22,209 @@ Html, body{
 .parent-container{
     display: table-cell;
     vertical-align: middle;  
-    
 }
-.parent-container #login-form{
+.parent-container .login-form{
     background: #000000;
-    margin-left: 100px;
-    color: #ffffff; 
-    text-align: left;
     width:  600px   ;
-    height: 625px   ;
+    height: 635px   ;
     border-radius: 15px;
 }
-.parent-container #login-form img{
+.parent-container .login-form .header{
+    margin-left: 125px;
+    color: #ffffff; 
+    text-align: left;
+}
+.parent-container img{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: center;
     height: 30px    ;
+}
+
+.login-with-google-btn {
+    transition: background-color .3s, box-shadow .3s;
+    margin-top: 25px;
+    width: 350px;
+    padding: 12px 16px 12px 42px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+    color: #757575;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: 95px 11px;
+    cursor: pointer;
+}
+.login-with-google-btn:hover {
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 2px 4px rgba(0, 0, 0, .25);
+}
+.apple-sign-in {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 350px;
+    margin-top: 25px;
+    padding: 12px 0px 12px 0px;
+    border: none;
+    background: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 50px;
+}
+  
+.hr-text {
+    padding-top: 4px;
+    font-family: Chirp-Regular;
+    font-size: 0.55em;
+    line-height: 0.8em;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: #ffffff;
+    text-align: center;
+    height: 1.6em;
+}
+.hr-text:before {
+    content: '';
+    background: #333639;
+    position: absolute;
+    left: 125px;
+    top: 50%;
+    width: 58%;
+    height: 1px;
+}
+.hr-text:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    padding: 0 .5em;
+    line-height: 1.5em;
+    background-color: #000000;
+}
+
+.user-input-wrp {
+	left: 125px;
+    width: 335px;
+    position: relative;
+    top:0 ;
+}
+.user-input-wrp .inputText{
+	width: 100%;
+    height: 50px;
+    border-radius: 5px;
+	outline: none;
+	border: 1px solid #333639;
+    color: #ffffff;
+    padding-left: 8px;
+    padding-top: 8px;
+    margin-bottom: 0;
+    font-size: 18px;
+    background: #000000;
+ 	box-shadow: none !important;
+}
+.user-input-wrp .inputText:focus{
+	border-color: #1d9cef;
+	border-width: medium medium 2px;
+}
+.user-input-wrp .floating-label {
+	font-family: Chirp-Regular;
+    font-weight: 400;
+    color: #4f5356;
+    font-size: 18px;
+    position: absolute;
+	pointer-events: none;
+	top: 20px;
+	left: 10px;
+	transition: 0.2s ease all;
+}
+.user-input-wrp input:focus ~ .floating-label,
+.user-input-wrp input:not(:focus):valid ~ .floating-label{
+	top: 10px;
+	left: 10px;
+    color: #1d9cef;
+	font-size: 13px;
+	opacity: 1;
+}
+
+.next-button {
+    font-family: Chirp;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 125px;
+    width: 350px;
+    padding: 12px 12px 12px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+    color: #000000;
+    font-weight: 500;
+    background-color: white;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.forgot-button {
+    font-family: Chirp;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 125px;
+    width: 350px;
+    padding: 12px 12px 12px;
+    border: 1px solid #4f5356;
+    border-radius: 50px;
+    color: #ffffff;
+    font-weight: 500;
+    background-color: #000000;
+    cursor: pointer;
+}
+
+p {
+    font-family: Chirp-Regular;
+    color: #4f5356;
+    font-size: 16px;
+    margin-top: 45px;
+    margin-left: 125px;
+}
+p a{
+    font-family: Chirp-Regular;
+    color: #1d9cef;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 45px;
+}
+
+#mdiv {
+    width: 25px;
+    height: 25px;
+    margin-left: 11px;
+    padding-left: 11px;
+    padding-top: 11px;
+}
+#mdiv:hover {
+    width: 25px;
+    height: 25px;
+    background-color: #4f5356;
+    border-radius: 50%;
+    margin-left: 11px;
+    padding-left: 11px;
+    padding-top: 11px;
+}
+.mdiv {
+    height: 18px;
+    margin-top: 11px;
+    width: 2px;
+    background-color: #ffffff;
+    transform: rotate(45deg);
+    Z-index: 1;
+}
+.md {
+    height: 18px;
+    width: 2px;
+    background-color: #ffffff ;
+    transform: rotate(90deg);
+    Z-index: 2;
 }

