@@ -1,0 +1,34 @@
+@font-face{
+    font-family: Chirp;
+    src: url('chirp-bold-web.woff'), url('chirp-bold-web.woff') format('woff');
+}
+Html, body{
+	font-family: Chirp;
+    font-size: 1.5em;
+    background:#242d35;
+    height: 100%    ;
+    margin: 0px     ;
+    padding:0px     ;
+}
+.parent-div{
+    display: table  ;
+    height: 100%    ;
+    margin: 0 auto  ;
+}
+.parent-container{
+    display: table-cell;
+    vertical-align: middle;  
+    
+}
+.parent-container #login-form{
+    background: #000000;
+    margin-left: 100px;
+    color: #ffffff; 
+    text-align: left;
+    width:  600px   ;
+    height: 625px   ;
+    border-radius: 15px;
+}
+.parent-container #login-form img{
+    height: 30px    ;
+}
