@@ -181,6 +181,10 @@ Html, body{
     background-color: #000000;
     cursor: pointer;
 }
+.forgot-button a{
+    text-decoration: none;
+    color: #ffffff;
+}
 
 p {
     font-family: Chirp-Regular;
