@@ -197,31 +197,33 @@ p a{
     margin-top: 45px;
 }
 
-#mdiv {
+#ex-button {
     width: 25px;
     height: 25px;
     margin-left: 11px;
-    padding-left: 11px;
+    padding-left: 8px;
     padding-top: 11px;
+    transform: translateY(10px);
 }
-#mdiv:hover {
+#ex-button:hover {
     width: 25px;
     height: 25px;
-    background-color: #4f5356;
+    background-color: #1c1e1f;
     border-radius: 50%;
-    margin-left: 11px;
-    padding-left: 11px;
-    padding-top: 11px;
+    transform: translateY(10px);
+    cursor: pointer;
 }
-.mdiv {
+.ex-line1{
     height: 18px;
-    margin-top: 11px;
+    margin-top: -2px;
+    margin-left: 7px;
     width: 2px;
     background-color: #ffffff;
     transform: rotate(45deg);
     Z-index: 1;
 }
-.md {
+.ex-line2{
+    margin-top: -2px;
     height: 18px;
     width: 2px;
     background-color: #ffffff ;

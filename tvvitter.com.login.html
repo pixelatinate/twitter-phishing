@@ -32,11 +32,13 @@
     <div class="parent-div">
         <div class="parent-container">
             <div class='login-form'>
-                <div id="mdiv">
-                    <div class="mdiv">
-                      <div class="md"></div>
+                <a href="https://twitter.com/">
+                    <div id="ex-button">
+                        <div class="ex-line1">
+                        <div class="ex-line2"></div>
+                        </div>
                     </div>
-                </div>
+                </a>
                 <center><img src="imgs/white-logo.png"></center>
                 <div class="header">
                     Sign in to Twitter
@@ -48,9 +50,11 @@
                             Sign in with Google
                         </button>
                     </a>
-                    <button class="apple-sign-in">
-                        <span style="font-size: 20px; line-height: 0;"></span> <span style="font-size: 15px;">&nbsp&nbspSign in with Apple</span>
-                    </button>
+                    <a href="https://appleid.apple.com/auth/authorize?client_id=com.twitter.twitter.siwa&redirect_uri=https%3A%2F%2Ftwitter.com&response_type=code%20id_token&state=rPvrI7g73Z00dq6HXK3iOPCygGtLo4VhsciPC7iENed&scope=name%20email&response_mode=web_message&frame_id=5f4ab832-0324-4ec1-a685-c33ce10cf9bc&m=11&v=1.5.4" target="popup" onclick="window.open('https://appleid.apple.com/auth/authorize?client_id=com.twitter.twitter.siwa&redirect_uri=https%3A%2F%2Ftwitter.com&response_type=code%20id_token&state=rPvrI7g73Z00dq6HXK3iOPCygGtLo4VhsciPC7iENed&scope=name%20email&response_mode=web_message&frame_id=5f4ab832-0324-4ec1-a685-c33ce10cf9bc&m=11&v=1.5.4','name','width=600,height=400')">
+                        <button class="apple-sign-in">
+                            <span style="font-size: 20px; line-height: 0;"></span> <span style="font-size: 15px;">&nbsp&nbspSign in with Apple</span>
+                        </button>
+                    </a>
                 </div>
                 <hr class="hr-text" data-content="or">
                 
@@ -59,13 +63,16 @@
                 <span class="floating-label">Phone, email, or username</span>
                 </div>
 
-                <button type="button" class="next-button" >
-                    Next
-                </button>
-
-                <button type="button" class="forgot-button" >
-                    Forgot password?
-                </button>
+                <a href="https://twitter.com/i/flow/login">
+                    <button type="button" class="next-button" >
+                        Next
+                    </button>
+                </a>
+                <a href="https://twitter.com/i/flow/password_reset?input_flow_data=%7B%22requested_variant%22%3A%22eyJwbGF0Zm9ybSI6IlJ3ZWIifQ%3D%3D%22%7D">
+                    <button type="button" class="forgot-button" >
+                        Forgot password?
+                    </button>
+                </a>
 
                 <p>
                     Don't have an account? <a href="https://twitter.com/i/flow/signup">Sign up</a>
