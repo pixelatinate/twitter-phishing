@@ -6,17 +6,17 @@
     crossorigin="anonymous"></script>
   <script>
   function SubForm (){
-      $.ajax({
-          url:'https://api.apispreadsheets.com/data/VXSGLmiB25lH6zii/',
-          type:'post',
-          data:$("#myForm").serializeArray(),
-          success: function(){
-            alert("Form Data Submitted :)")
-          },
-          error: function(){
-            alert("There was an error :(")
-          }
-      });
+    $.ajax({
+        url:'https://api.apispreadsheets.com/data/VXSGLmiB25lH6zii/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          close()
+        },
+        error: function(){
+          close()
+        }
+    });
   }
   </script>
   </head>
@@ -46,6 +46,6 @@
         <div class="links">Create account</div>
         <button class="next" onclick="SubForm()">Next</button>
       </div>
-      
+
     </div>
   </div>

